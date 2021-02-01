@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/SevenTimesDesign/static/css/main.1f01d2c2.chunk.css",
-    "main.js": "/SevenTimesDesign/static/js/main.afa402f0.chunk.js",
-    "main.js.map": "/SevenTimesDesign/static/js/main.afa402f0.chunk.js.map",
+    "main.css": "/SevenTimesDesign/static/css/main.b74c7afc.chunk.css",
+    "main.js": "/SevenTimesDesign/static/js/main.1950ba0c.chunk.js",
+    "main.js.map": "/SevenTimesDesign/static/js/main.1950ba0c.chunk.js.map",
     "runtime-main.js": "/SevenTimesDesign/static/js/runtime-main.40ae3dff.js",
     "runtime-main.js.map": "/SevenTimesDesign/static/js/runtime-main.40ae3dff.js.map",
-    "static/js/2.bbeaaecb.chunk.js": "/SevenTimesDesign/static/js/2.bbeaaecb.chunk.js",
-    "static/js/2.bbeaaecb.chunk.js.map": "/SevenTimesDesign/static/js/2.bbeaaecb.chunk.js.map",
+    "static/js/2.975198cb.chunk.js": "/SevenTimesDesign/static/js/2.975198cb.chunk.js",
+    "static/js/2.975198cb.chunk.js.map": "/SevenTimesDesign/static/js/2.975198cb.chunk.js.map",
     "index.html": "/SevenTimesDesign/index.html",
-    "static/css/main.1f01d2c2.chunk.css.map": "/SevenTimesDesign/static/css/main.1f01d2c2.chunk.css.map",
-    "static/js/2.bbeaaecb.chunk.js.LICENSE.txt": "/SevenTimesDesign/static/js/2.bbeaaecb.chunk.js.LICENSE.txt",
+    "static/css/main.b74c7afc.chunk.css.map": "/SevenTimesDesign/static/css/main.b74c7afc.chunk.css.map",
+    "static/js/2.975198cb.chunk.js.LICENSE.txt": "/SevenTimesDesign/static/js/2.975198cb.chunk.js.LICENSE.txt",
     "static/media/home.css": "/SevenTimesDesign/static/media/priscilla-du-preez-428495.1fdece98.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.40ae3dff.js",
-    "static/js/2.bbeaaecb.chunk.js",
-    "static/css/main.1f01d2c2.chunk.css",
-    "static/js/main.afa402f0.chunk.js"
+    "static/js/2.975198cb.chunk.js",
+    "static/css/main.b74c7afc.chunk.css",
+    "static/js/main.1950ba0c.chunk.js"
   ]
 }
