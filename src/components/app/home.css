@@ -14,7 +14,7 @@
 
 .hero {
 	width: 100%;
-	background: linear-gradient( rgba(32, 41, 69, 0.77), rgba(32, 41, 69, 0.77) ), url(../../assets/img/annie-spratt-176628.jpg);
+	background: linear-gradient( rgba(32, 41, 69, 0.77), rgba(32, 41, 69, 0.77) ), url('../../assets/img/annie-spratt-176628.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -27,8 +27,13 @@
 
 .about {
 	width: 100%;
-	background: linear-gradient( rgba(220, 191, 165, 0.84), rgba(220, 191, 165, 0.84) ), url(../../assets/img/priscilla-du-preez-428495.jpg);
+	background: linear-gradient( rgba(220, 191, 165, 0.84), rgba(220, 191, 165, 0.84) ), url('../../assets/img/priscilla-du-preez-428495.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+}
+
+.thumbnail {
+	width: 350px;
+	height: auto;
 }

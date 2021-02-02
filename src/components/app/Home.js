@@ -5,7 +5,10 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Jumbotron from 'react-bootstrap/Jumbotron';
+import { Feat } from '../../assets/img/images.js';
 import './home.css'
+
+console.log(Feat);
 
 class Home extends Component {
 	render() {
@@ -13,9 +16,10 @@ class Home extends Component {
 			<div class="home">
 				<Jumbotron className="hero">
 					<Container>
-						<Image src="../../assets/img/memory-game-feat.png" rounded/>
 						<h3>Featured Project</h3>
-						<p className="feat-proj"></p>
+						<Image src={Feat[0].src.default} rounded className="thumbnail"/>
+						<p>{Feat[0].title}</p>
+						<span>{Feat[0].description}</span>
 						<Button />
 						<Button />
 					</Container>

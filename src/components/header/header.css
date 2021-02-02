@@ -11,6 +11,7 @@ HEADER
 .logo {
 	cursor: pointer;
 	margin-left: 10px;
+	max-height: 48px;
 }
 
 .nav-menu {

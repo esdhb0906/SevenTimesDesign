@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
 import { MenuItems } from './MenuItems.js'
+import logo from '../../assets/7TD-logo.png';
 import './header.css';
 
 class Header extends Component {
@@ -16,7 +18,7 @@ class Header extends Component {
 		return (
 			<nav className="Header">
 				<Container>
-					<img src="/public/7TD-logo.png" alt="Seven Times Design" className="logo"></img>
+					<Image src={logo} alt="Seven Times Design" className="logo" />
 					<div className="menu-icon"
 						onClick={this.handleClick}
 					>
