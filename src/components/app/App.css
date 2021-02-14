@@ -1,3 +1,22 @@
+/****** 
+GENERAL
+******/
+h2,
+h3,
+h4 {
+	text-transform: uppercase;
+}
+
+h4 {
+	font-size: .8em;
+	font-weight: normal;
+	margin-bottom: 20px;
+}
+
+.App {
+	text-align: center;
+}
+
 .App .flex {
 	display: flex;
 	justify-content: space-between;
@@ -28,28 +47,18 @@
 	right: 10px;
 }
 
-h2,
-h3,
-h4 {
-	text-transform: uppercase;
+.MuiPaper-elevation1 {
+	box-shadow: none!important;
 }
 
-h4 {
-	font-size: .8em;
-	font-weight: normal;
-	margin-bottom: 20px;
+.MuiPaper-root {
+	color: unset!important;
+	transition: none!important;
+	background-color: unset!important;
 }
 
 section {
 	padding: 50px 0;
-}
-
-.feat-head {
-	width: -webkit-fill-available;
-	width: -moz-available;
-	font-size: 1em;
-	font-weight: 300;
-	letter-spacing: .5em;
 }
 
 button {
@@ -76,6 +85,27 @@ button .fas {
 	font-size: .8em;
 }
 
+.img-thumb {
+	max-width: 350px;
+	min-width: 200px;
+	width: 20%;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+
+/***
+HOME
+***/
+
+.feat-head {
+	width: -webkit-fill-available;
+	width: -moz-available;
+	font-size: 1em;
+	font-weight: 300;
+	letter-spacing: .5em;
+}
+
 .hero,
 .recent {
 	color: #fff;
@@ -84,7 +114,6 @@ button .fas {
 .home {
 	display: flex;
 	align-items: center;
-	text-align: center;
 }
 
 .hero {
@@ -93,24 +122,6 @@ button .fas {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-}
-
-.feat-thumb {
-	max-width: 350px;
-	min-width: 200px;
-	width: 20%;
-	height: auto;
-	margin: 20px;
-}
-
-.MuiPaper-elevation1 {
-	box-shadow: none!important;
-}
-
-.MuiPaper-root {
-	color: unset!important;
-	transition: none!important;
-	background-color: unset!important;
 }
 
 .recent {
@@ -139,6 +150,19 @@ div > .fas {
 	border: black solid 2px!important;
 }
 
+/********
+PORTFOLIO
+********/
+
+.portfolio {
+	background: #202945;
+	color: white;
+}
+
+/*****
+FOOTER
+*****/
+
 footer {
 	background: #202945;
 }
@@ -155,6 +179,10 @@ footer {
 	flex-wrap: wrap;
 	padding: 10px 0px;
 }
+
+/************
+MEDIA QUERIES
+************/
 
 @media screen and (min-width: 451px) {
 	.Footer {

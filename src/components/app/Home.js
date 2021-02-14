@@ -38,7 +38,7 @@ class Home extends Component {
 								<Grid item xs>
 									<Card>
 										<CardContent>
-											<img src={item.src} alt={item.title} className="feat-thumb"/>
+											<img src={item.src} alt={item.title} className="img-thumb"/>
 											<p>{item.title}</p>
 											<p>{item.description}	</p>
 										</CardContent>

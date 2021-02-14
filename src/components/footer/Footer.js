@@ -16,7 +16,7 @@ class Footer extends Component {
 							)
 						})}
 					</ul>
-					<p>&copy;SEVEN TIMES DESIGN | All Rights Reserved</p>
+					<p>&copy;2021 | SEVEN TIMES DESIGN | All Rights Reserved</p>
 				</Container>
 			</footer>
 		);

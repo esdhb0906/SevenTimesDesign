@@ -1,14 +1,15 @@
 import './App.css';
 import Header from '../header/Header.js';
-import Home from './Home.js';
+// import Home from './Home.js';
+import Portfolio from './Portfolio.js';
 import Footer from '../footer/Footer.js';
 
 function App() {
   return (
     <div className="App">
 			<Header />
-			<Home />
-			{/* <Portfolio /> */}
+			{/* <Home /> */}
+			<Portfolio />
 			<Footer />
     </div>
   );
