@@ -15,7 +15,7 @@ class Header extends Component {
 
 	render () {
 		return (
-			<nav className="Header">
+			<nav>
 				<Container maxWidth='md' className="flex">
 					<img src={logo} className="logo" alt="Seven Times Design"/>
 					<div className="menu-icon"

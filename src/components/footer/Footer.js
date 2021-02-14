@@ -6,7 +6,7 @@ class Footer extends Component {
 	render() {
 		return (
 			<footer>
-				<Container className="Footer flex">
+				<Container className="Footer flex fcol">
 					<ul className="footer-menu">
 						{MenuItems.map((item, index) => {
 							return (

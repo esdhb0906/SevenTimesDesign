@@ -1,7 +1,7 @@
 /******
 HEADER
 ******/
-.Header {
+nav {
 	height: 80px;
 	display: flex;
 	align-items: center;
@@ -41,7 +41,7 @@ HEADER
 }
 
 @media screen and (max-width: 992px) {
-	.Header {
+	.nav-links {
 		/* position: relative */
 	}
 

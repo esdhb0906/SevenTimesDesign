@@ -1,6 +1,6 @@
 export const Feat = [
 	{ id: 'memfeat', cName: 'feat', src: require('./memory-game-feat.png').default,
-		title: 'Ice Cream for Memory', description: 'Personal Project' },
+		title: 'Dessert for Memory', description: 'Personal Project' },
 	{ id: 'ed520', cName: 'feat', src: require('./Ed-Dining-520x400.jpg').default,
 		title: 'Educational Dining', description: 'Continental Services' },
 	{ id: 'cont520', cName: 'feat', src: require('./Cont-Client-520x400.png').default,
