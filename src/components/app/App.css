@@ -1,12 +1,166 @@
-.Header .container {
+.App .flex {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 100%;
 }
 
-.container {
-	max-width: 1100px;
-	margin: 0 auto;
-	padding: 0 20px;
+.MuiContainer-root {
+	padding: 50px 0;
+}
+
+.MuiChip-root {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+h2,
+h3,
+h4 {
+	text-transform: uppercase;
+}
+
+h4 {
+	font-size: .8em;
+	font-weight: normal;
+	margin-bottom: 20px;
+}
+
+.feat-head {
+	font-size: 1em;
+	font-weight: 300;
+	letter-spacing: .5em;
+}
+
+button {
+	font-size: .75em;
+	letter-spacing: .25em;
+	line-height: 120%;
+}
+
+.subhead {
+	font-weight: 500;
+	letter-spacing: .125em;
+}
+
+.quote {
+	font-style: italic;
+	font-family: "Playfair", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.author {
+	font-size: .8em;
+}
+
+/* HOME */
+.hero,
+.recent {
+	color: #fff;
+}
+
+.home {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.hero {
+	width: 100%;
+	background: linear-gradient( rgba(32, 41, 69, 0.77), rgba(32, 41, 69, 0.77) ), url('../../assets/img/michelle-tsang-VTt_Jn1LrOg-unsplash.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.hero .flex {
+	height: calc(100vh - 80px);
+}
+
+.feat-thumb {
+	max-width: 350px;
+	min-width: 200px;
+	width: 20%;
+	height: auto;
+	margin: 20px;
+}
+
+.MuiPaper-elevation1 {
+	box-shadow: none!important;
+}
+
+.MuiPaper-root {
+	color: unset!important;
+	transition: none!important;
+	background-color: unset!important;
+}
+
+.recent {
+	width: 100%;
+	background-color: #BF4953;
+}
+
+.about {
+	width: 100%;
+	background: linear-gradient( rgba(220, 191, 165, 0.84), rgba(220, 191, 165, 0.84) ), url('../../assets/img/priscilla-du-preez-428495.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.about .logo {
+	width: 120px;
+	vertical-align: middle;
+}
+
+.fas {
+	padding: 0 10px;
+}
+
+
+/* FOOTER */
+footer {
+	background: #202945;
+}
+
+.Footer {
+	display: flex;
+	height: 230px;
+	width: 100%;
+	color: white;
+	clear: both;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.Footer li {
+	display: block;
+	font-size: 1.125em;
+	flex-wrap: wrap;
+	padding: 10px 0px;
+}
+
+@media screen and (min-width: 451px) {
+	.Footer {
+		height: 170px;
+	}
+
+	.Footer li {
+    font-size: 1em;
+    display: inline-block;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.hero .flex {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.hero img {
+		order: -1;
+	}
 }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Container from 'react-bootstrap/Container';
-import Image from 'react-bootstrap/Image';
+import { Container } from '@material-ui/core';
 import { MenuItems } from './MenuItems.js'
 import logo from '../../assets/7TD-logo.png';
 import './header.css';
@@ -17,8 +16,8 @@ class Header extends Component {
 	render () {
 		return (
 			<nav className="Header">
-				<Container>
-					<Image src={logo} alt="Seven Times Design" className="logo" />
+				<Container maxWidth='md' className="flex">
+					<img src={logo} className="logo" alt="Seven Times Design"/>
 					<div className="menu-icon"
 						onClick={this.handleClick}
 					>
