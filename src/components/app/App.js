@@ -1,9 +1,11 @@
 import './App.css';
 import { Route } from 'react-router-dom';
-import Header from '../header/Header.js';
+import Header from '../header/Header';
 import Home from './Home';
 import Portfolio from './Portfolio';
-import Footer from '../footer/Footer.js';
+import Project from '../project/Project';
+import Footer from '../footer/Footer';
+import { Images } from '../../assets/img/images';
 
 function App() {
 	return (
@@ -11,6 +13,7 @@ function App() {
 			<Header />
 			<Route exact path="/" component={Home}></Route>
 			<Route path="/Portfolio" component={Portfolio}></Route>
+			<Route path="/Project" render={(props) => (<Project slides={Images} {...props} />)}></Route>
 			<Footer />
     </div>
   );

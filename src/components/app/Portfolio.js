@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import {
 	Card, 
 	CardContent, 
@@ -20,13 +21,15 @@ class Portfolio extends Component {
 							{Images.map((item, index) => (
 								item.description !== 'Logo' && !item.id.includes('305') ?
 								<Grid item xs key={index}>
-									<Card>
-										<CardContent>
-											<img src={item.src} alt={item.title} className="img-thumb"/>
-											<p>{item.title}</p>
-											<p>{item.description}	</p>
-										</CardContent>
-									</Card>
+									<Link to="/Project">
+										<Card>
+											<CardContent>
+												<img src={item.src} alt={item.title} className="img-thumb"/>
+												<p>{item.title}</p>
+												<p>{item.description}	</p>
+											</CardContent>
+										</Card>
+									</Link>
 								</Grid> : null
 							))}
 						</Grid>

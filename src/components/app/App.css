@@ -167,6 +167,47 @@ PORTFOLIO
 	color: white;
 }
 
+/*******
+PROJECTS
+*******/
+
+.proj {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.details,
+.slide-active {
+	width: 50vw;
+	height: calc(50vw - 80px);
+}
+
+.slider,
+.slide-active {
+	justify-content: center!important;
+}
+
+.right-arrow {
+	position: absolute;
+	top: 50%;
+	right: 1%;
+	font-size: 3rem;
+	z-index: 10;
+	cursor: pointer;
+	user-select: none;
+}
+
+.left-arrow {
+	position: absolute;
+	top: 50%;
+	left: 51%;
+	font-size: 3rem;
+	z-index: 10;
+	cursor: pointer;
+	user-select: none;
+}
+
 /*****
 FOOTER
 *****/
