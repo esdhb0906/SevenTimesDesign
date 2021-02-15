@@ -13,6 +13,11 @@ h4 {
 	margin-bottom: 20px;
 }
 
+a {
+	color: white;
+	text-decoration: none;
+}
+
 .App {
 	text-align: center;
 }
@@ -146,8 +151,11 @@ div > .fas {
 
 .download {
 	width: 230px;
-	color: black!important;
 	border: black solid 2px!important;
+}
+
+.download a {
+	color: black!important;
 }
 
 /********

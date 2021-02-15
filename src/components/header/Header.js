@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { Container } from '@material-ui/core';
 import { MenuItems } from './MenuItems.js'
 import logo from '../../assets/7TD-logo.png';
@@ -17,7 +19,9 @@ class Header extends Component {
 		return (
 			<nav>
 				<Container maxWidth='md' className="flex">
-					<img src={logo} className="logo" alt="Seven Times Design"/>
+					<Link to="/">
+						<img src={logo} className="logo" alt="Seven Times Design"/>
+					</Link>
 					<div className="menu-icon"
 						onClick={this.handleClick}
 					>
@@ -27,7 +31,11 @@ class Header extends Component {
 						{MenuItems.map((item, index) => {
 							return (
 								<li key={index}>
-									<a className={item.cName} href={item.url}>{item.page}</a>
+									{
+										item.url.includes('#') ?
+										<HashLink className={item.cName} smooth to={item.url}>{item.page}</HashLink> :
+										<Link className={item.cName} to={item.url}>{item.page}</Link>
+									}
 								</li>
 							)
 						})}

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {
 	Card, 
 	CardContent, 
-	Chip, 
 	Container, 
 	Grid } from '@material-ui/core';
 import { Images } from '../../assets/img/images.js';
@@ -20,7 +19,7 @@ class Portfolio extends Component {
 						<Grid container justify="center" alignItems="center">
 							{Images.map((item, index) => (
 								item.description !== 'Logo' && !item.id.includes('305') ?
-								<Grid item xs>
+								<Grid item xs key={index}>
 									<Card>
 										<CardContent>
 											<img src={item.src} alt={item.title} className="img-thumb"/>
