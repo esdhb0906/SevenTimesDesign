@@ -21,7 +21,7 @@ class Portfolio extends Component {
 							{Images.map((item, index) => (
 								item.description !== 'Logo' && !item.id.includes('305') ?
 								<Grid item xs key={index}>
-									<Link to="/Project">
+									<Link to="/Project" project={item.title}>
 										<Card>
 											<CardContent>
 												<img src={item.src} alt={item.title} className="img-thumb"/>

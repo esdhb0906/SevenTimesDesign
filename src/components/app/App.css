@@ -180,7 +180,7 @@ PROJECTS
 .details,
 .slide-active {
 	width: 50vw;
-	height: calc(50vw - 80px);
+	height: calc(100vh - 80px);
 }
 
 .slider,

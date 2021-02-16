@@ -14,7 +14,7 @@ function App() {
 			<Route exact path="/" component={Home}></Route>
 			<Route path="/Portfolio" component={Portfolio}></Route>
 			<Route path="/Project" render={(props) => (<Project slides={Images} {...props} />)}></Route>
-			<Footer />
+			{window.location.pathname !== "/Project" && <Footer />}
     </div>
   );
 }
