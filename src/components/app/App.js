@@ -11,8 +11,8 @@ function App() {
 	return (
 		<div className="App">
 			<Header />
-			<Route exact path="/" component={Home}></Route>
-			<Route path="/Portfolio" component={Portfolio}></Route>
+			<Route exact path={["/", "/SevenTimesDesign"]} component={Home}></Route>
+			<Route path="/Portfolio" render={(props) => (<Portfolio images={Images} {...props} />)}></Route>
 			<Route path="/Project" render={(props) => (<Project slides={Images} {...props} />)}></Route>
 			{window.location.pathname !== "/Project" && <Footer />}
     </div>
