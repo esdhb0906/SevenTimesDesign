@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Grid, Typography } from '@material-ui/core'
+import { Container, Divider, Grid, Typography } from '@material-ui/core'
 import { styled as MaterialStyled } from '@material-ui/core/styles'
 import FaceIcon from '@material-ui/icons/Face'
 import FireplaceIcon from '@material-ui/icons/Fireplace'
@@ -33,16 +33,12 @@ function Home() {
 						</Grid>
 						<Grid item xs={12} sm={7} className="aboutme">
 							<Grid>
-								<hr />
-								<br />
-								<AboutMe>About Me</AboutMe>
-								<Intro>Hello, I'm &Eacute;pris Harris-Burnett</Intro>
-								<br/>
+								<Divider light={true} />
+								<AboutMe variant="h2">About Me</AboutMe>
+								<Intro variant="h4">Hello, I'm &Eacute;pris Harris-Burnett</Intro>
 								<p>I'm web developer and graphic designer in Charlotte, NC.</p>
-								<br/>
 								<p>I fell in love with technology at a young age. Around the age of eight I discovered I was a natural at drawing. During the MySpace years, I decided to merge the two loves together by customizing pages for friends. Ultimately, graphic design was the path I walked before finding my way back into developing. Now, I'm back to enoying the best of both worlds; where creativity and logic coincide.</p>
-								<br />
-								<hr />
+								<Divider light={true} />
 							</Grid>
 						</Grid>
 					</Grid>
@@ -76,10 +72,18 @@ const Section = styled.section `
 		align-items: center;
 	}
 
+	&.about p {
+		margin: 15px 0;
+	}
+
 	.aboutme {
 		display: grid;
 		place-items: center;
 		background-color: #BF4953;
+	}
+
+	.MuiDivider-root {
+		border-top: 3px double #FFF;
 	}
 `
 const Hero = styled.section `
@@ -139,6 +143,7 @@ const AboutMe = MaterialStyled(Typography) ({
 	fontSize: '24px',
 	fontWeight: 300,
 	color: '#202945',
+	marginTop: '15px'
 })
 
 const Intro = MaterialStyled(Typography) ({
