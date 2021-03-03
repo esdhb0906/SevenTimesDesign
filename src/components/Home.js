@@ -45,7 +45,35 @@ function Home() {
 				</Container>
 			</Section>
 			<Section>
-				<Container maxWidth="md">Experience</Container>
+				<Container maxWidth="md" className="experience">
+					<Typography variant="h3">Work Experience</Typography>
+					<ExperienceContainer>
+						<Experience>
+							<div id="fill1"></div>
+							<FireplaceIcon />
+							<Typography variant="body2" >Brooks Equipment</Typography>
+							<Typography variant="overline">Web Developer & Graphic Designer</Typography>
+						</Experience>
+						<Experience>
+							<div id="fill2"></div>
+							<FaceIcon />
+							<Typography variant="body2" >Bradley Co.</Typography>
+							<Typography variant="overline">Graphic Designer</Typography>
+						</Experience>
+						<Experience>
+							<div id="fill3"></div>
+							<LocalDiningIcon />
+							<Typography variant="body2" >Continental Services</Typography>
+							<Typography variant="overline">Graphic & Motion Graphic Designer</Typography>
+						</Experience>
+						<Experience>
+							<div id="fill4"></div>
+							<SportsBasketballIcon />
+							<Typography variant="body2" >Palace Sports & Entertainment</Typography>
+							<Typography variant="overline">Graphic Design Intern</Typography>
+						</Experience>
+					</ExperienceContainer>
+				</Container>
 			</Section>
 			<Section>
 				<Container maxWidth="md">Portfolio</Container>
@@ -65,6 +93,8 @@ const Wrapper = styled.div `
 `
 const Section = styled.section `
 	height: 100vh;
+	display: grid;
+	place-items: center;
 	color: #ccdbe5;
 
 	&.about {
@@ -84,6 +114,18 @@ const Section = styled.section `
 
 	.MuiDivider-root {
 		border-top: 3px double #FFF;
+	}
+
+	.experience {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.MuiTypography-h3 {
+		font-size: 48px;
+		font-family: 'Playfair Display', Serif;
+		text-align: center;
+		margin-bottom: 50px;
 	}
 `
 const Hero = styled.section `
@@ -150,3 +192,51 @@ const Intro = MaterialStyled(Typography) ({
 	fontSize: '30px',
 	fontWeight: 700,
 })
+
+const ExperienceContainer = styled.div `
+	display: flex;
+`
+
+const Experience = styled.div `
+	width: 200px;
+	height: 200px;
+	padding: 15px;
+	margin: 20px;
+	border: 1px solid #BF4953;
+	border-top: 10px solid #BF4953;
+
+	position: relative;
+	overflow: hidden;
+
+	* {
+		position: relative;
+		transition: all .20s ease-in;
+	}
+
+	#fill1, #fill2,
+	#fill3, #fill4 {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: -250px;
+		left: 0;
+		background: #BF4953;
+		transition: all .20s ease-in;
+	}
+
+	:hover #fill1,
+	:hover #fill2,
+	:hover #fill3,
+	:hover #fill4 {
+		top: 0;
+	}
+
+	.MuiTypography-overline {
+		font-family: 'Playfair Display', serif;
+		font-weight: 700;
+		line-height: normal;
+		position: absolute;
+		top: 100px;
+		color: #202945;
+	}
+`
