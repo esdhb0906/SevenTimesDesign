@@ -1,5 +1,6 @@
 import React from 'react'
-import { Container, Divider, Grid, Typography } from '@material-ui/core'
+import { useFormContext, Controller, useForm, formProvider } from 'react-hook-form'
+import { Container, Divider, Grid, Paper, Typography } from '@material-ui/core'
 import { styled as MaterialStyled } from '@material-ui/core/styles'
 import FaceIcon from '@material-ui/icons/Face'
 import FireplaceIcon from '@material-ui/icons/Fireplace'
@@ -76,7 +77,19 @@ function Home() {
 				</Container>
 			</Section>
 			<Section>
-				<Container maxWidth="md">Portfolio</Container>
+				<Container maxWidth="md" className="portfolio">
+					<Paper elevation={0} />
+					<Paper elevation={0} />
+					<Paper elevation={0} />
+					<Paper elevation={0} />
+					<Paper elevation={0} />
+					<Paper elevation={0} />
+					<Paper elevation={0} />
+					<Paper elevation={0} />
+					<Paper elevation={0} />
+					<Paper elevation={0} />
+					<Paper elevation={0} />
+				</Container>
 			</Section>
 			<Section>
 				<Container maxWidth="md">Contact</Container>
@@ -92,7 +105,7 @@ const Wrapper = styled.div `
 	margin: 0 auto;
 `
 const Section = styled.section `
-	height: 100vh;
+	min-height: 100vh;
 	display: grid;
 	place-items: center;
 	color: #ccdbe5;
@@ -126,6 +139,19 @@ const Section = styled.section `
 		font-family: 'Playfair Display', Serif;
 		text-align: center;
 		margin-bottom: 50px;
+	}
+
+	.portfolio {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.portfolio > * {
+		width: 200px;
+		height: 200px;
+		margin: 16px 20px;
 	}
 `
 const Hero = styled.section `
