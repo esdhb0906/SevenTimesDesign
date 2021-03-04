@@ -1,6 +1,6 @@
 import React from 'react'
 import { useFormContext, Controller, useForm, formProvider } from 'react-hook-form'
-import { Container, Divider, Grid, Paper, Typography } from '@material-ui/core'
+import { Button, Container, Divider, Grid, List, ListItem, ListItemIcon, ListItemText, Paper, TextField, Typography } from '@material-ui/core'
 import { styled as MaterialStyled } from '@material-ui/core/styles'
 import FaceIcon from '@material-ui/icons/Face'
 import FireplaceIcon from '@material-ui/icons/Fireplace'
@@ -92,7 +92,55 @@ function Home() {
 				</Container>
 			</Section>
 			<Section>
-				<Container maxWidth="md">Contact</Container>
+				<Container maxWidth="md">
+					<Grid container spacing={5} xs={12}>
+						<Grid container item xs={12} sm={8}>
+							<h4>Stay in Touch ...</h4>
+							<form>
+								<TextField required label="First & Last Name" defaultValue="John or Jane Doe" variant="outlined" margin="normal" color="primary" />
+								<TextField required label="Email Address" defaultValue="JDoe@email.com" variant="outlined" margin="normal" />
+								<TextField required fullWidth label="Message Subject" defaultValue="RE: Subject" variant="outlined" margin="normal" />
+								<TextField required multiline fullWidth label="Message" defaultValue="Message ..." variant="outlined" margin="normal" rows={4} />
+								<Button type="submit" color="secondary" variant="contained" disableElevation >Submit</Button>
+							</form>
+						</Grid>
+						<Grid item xs={12} sm={4}>
+							<Typography variant="body1">Other Ways to Reach Me:</Typography>
+							<List>
+								<ListItem disableGutters >
+									<ListItemIcon>
+										<FaceIcon />
+									</ListItemIcon>
+									<ListItemText primary="Name" secondary="&Eacute;pris Harris-Burnett" />
+								</ListItem>
+							</List>
+							<List>
+								<ListItem disableGutters >
+									<ListItemIcon>
+										<FaceIcon />
+									</ListItemIcon>
+									<ListItemText primary="LinkedIn" secondary="linked.in/linkedin" />
+								</ListItem>
+							</List>
+							<List>
+								<ListItem disableGutters >
+									<ListItemIcon>
+										<FaceIcon />
+									</ListItemIcon>
+									<ListItemText primary="Phone" secondary="000.000.0000" />
+								</ListItem>
+							</List>
+							<List>
+								<ListItem disableGutters >
+									<ListItemIcon>
+										<FaceIcon />
+									</ListItemIcon>
+									<ListItemText primary="email" secondary="email@email.com" />
+								</ListItem>
+							</List>
+						</Grid>
+					</Grid>
+				</Container>
 			</Section>
 		</Wrapper>
 	)
@@ -152,6 +200,26 @@ const Section = styled.section `
 		width: 200px;
 		height: 200px;
 		margin: 16px 20px;
+	}
+
+	form {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	form * {
+		color: #ccdbe5;
+	}
+
+	form fieldset {
+		border-color: #ccdbe5;
+	}
+
+	.MuiSvgIcon-root {
+		height: 40px;
+		width: auto;
+		color: #BF4953;
 	}
 `
 const Hero = styled.section `
