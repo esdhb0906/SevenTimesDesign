@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Divider, Grid, Typography } from '@material-ui/core'
+import { Container, Typography } from '@material-ui/core'
 import { styled as MaterialStyled } from '@material-ui/styles'
 import styled from 'styled-components'
 import profile from '../../assets/EprisHB.png'
