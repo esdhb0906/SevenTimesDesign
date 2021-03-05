@@ -7,7 +7,7 @@ import profileImage from '../../assets/EprisHB.jpg'
 const About = () => {
 	return (
 		<Section className="about">
-				<Container maxWidth="md" justify="center" alignItems="center">
+				<Container maxWidth="md" justify="center">
 					<Grid container spacing={5}>
 						<Grid item xs={12} sm={5}>
 							<img src={profileImage} alt="Epris Harris-Burnett" width="300" height="auto" />

@@ -4,6 +4,7 @@ import { AppBar, IconButton, Toolbar } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import logo from '../assets/7TD-logo.png'
 import { NoEncryption } from '@material-ui/icons'
+import ThemeSelector from '../ThemeSelector'
 
 // const useStyles = makeStyles((theme) => ({
 // 	root: {
@@ -22,7 +23,7 @@ import { NoEncryption } from '@material-ui/icons'
 // 	}
 // }));
 
-function Header() {
+function Header({ ThemeSelector, setter }) {
 	// const classes = useStyles();
 
 	return (
@@ -31,6 +32,7 @@ function Header() {
 				<LogoButton edge="start">
 					<img src={logo} alt="Seven Times Design" />
 				</LogoButton>
+				{/* <ThemeSelector setter={setter} /> */}
 				<MenuButton edge="end" aria-label="Navigation Menu">
 					<MenuIcon />
 				</MenuButton>

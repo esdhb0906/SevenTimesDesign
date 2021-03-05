@@ -45,13 +45,7 @@ export const Images = [
 	{ id: 'ap305', cName: 'proj', src: require('./Andre-Port-305x320.png').default,
 		title: 'Portfolio Magazine', description: 'Assisting Art Director' },
 	{ id: 'ap610', cName: 'proj', src: require('./Andre-Port-610x640.png').default,
-		title: 'Portfolio Magazine', description: 'Assisting Art Director' },
-	{ id: 'bradley', cName: 'logo', src: require('./bradley-logo.png').default,
-		title: 'Bradley', description: 'Logo' },
-	{ id: 'continental', cName: 'logo', src: require('./continental-logo.png').default,
-		title: 'Continental', description: 'Logo' },
-	{ id: 'palace', cName: 'logo', src: require('./palace-logo.png').default,
-		title: 'Palace Sports & Entertainment', description: 'Logo' },
+		title: 'Portfolio Magazine', description: 'Assisting Art Director' }
 ]
 
 export const Proj = [
@@ -82,3 +76,18 @@ export const Proj = [
 	{ id: 'rofpos', cName: 'proj', src: require('./projects/rise-of-fall.png').default,
 		title: 'The Rise of Fall Pasta', description: 'Point of Sales Flyer' },
 ];
+
+export const Logos = [
+	{ id: 'bradley', cName: 'logo', src: require('./bradley-logo.png').default,
+		title: 'Bradley', description: 'Logo' },
+	{ id: 'continental', cName: 'logo', src: require('./continental-logo.png').default,
+		title: 'Continental', description: 'Logo' },
+	{ id: 'palace', cName: 'logo', src: require('./palace-logo.png').default,
+		title: 'Palace Sports & Entertainment', description: 'Logo' }
+]
+
+export const themeIcons = [
+	{ id: 'primary', cName: 'theme', src: require('../icons/ColorSelectorDefault.png').default, title: 'Default Theme', description: 'Theme' },
+	{ id: 'secondary', cName: 'theme', src: require('../icons/ColorSelectorSecondary.png').default, title: 'Secondary Theme', description: 'Theme' },
+	{ id: 'dark', cName: 'theme', src: require('../icons/ColorSelectorDark.png').default, title: 'Dark Theme', description: 'Theme' }
+]

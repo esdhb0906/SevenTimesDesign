@@ -8,7 +8,7 @@ const Contact = () => {
 	return (
 		<Section>
 				<Container maxWidth="md">
-					<Grid container spacing={5} xs={12}>
+					<Grid container spacing={5}>
 						<Grid container item xs={12} sm={8}>
 							<h4>Stay in Touch ...</h4>
 							<form>
