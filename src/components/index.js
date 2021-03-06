@@ -1,0 +1,8 @@
+export { default as Header } from './Header'
+export { default as Sidebars } from './Sidebars'
+export { default as Hero } from './Main/Hero'
+export { default as About } from './Main/About'
+export { default as Experience } from './Main/Experience'
+export { default as Portfolio } from './Main/Portfolio'
+export { default as Contact } from './Main/Contact'
+export { default as Footer } from './Footer'

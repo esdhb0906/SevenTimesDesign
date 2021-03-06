@@ -28,7 +28,7 @@ function Header({ ThemeSelector, setter }) {
 
 	return (
 		<Nav color="transparent">
-			<Toolbar>
+			<Bar>
 				<LogoButton edge="start">
 					<img src={logo} alt="Seven Times Design" />
 				</LogoButton>
@@ -36,7 +36,7 @@ function Header({ ThemeSelector, setter }) {
 				<MenuButton edge="end" aria-label="Navigation Menu">
 					<MenuIcon />
 				</MenuButton>
-			</Toolbar>
+			</Bar>
 		</Nav>
 	)
 }
@@ -49,8 +49,11 @@ const Nav = styled(AppBar)({
 	boxShadow: 'none'
 });
 
+const Bar = styled(Toolbar)({
+	justifyContent: 'space-between'
+})
+
 const LogoButton = styled(IconButton)({
-	flexGrow: 1,
 	justifyContent: 'start',
 	
 	'& img': {

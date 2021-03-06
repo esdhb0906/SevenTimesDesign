@@ -7,6 +7,7 @@ import App from './App';
 
 import * as themes from './theme/schema.json';
 import { setToLS } from './utils/storage';
+import ScrollToTop from './components/ScrollToTop'
 
 const Index = () => {
   setToLS('all-themes', themes.default);
@@ -17,6 +18,7 @@ const Index = () => {
 
 ReactDOM.render(
 	<Router>
+		<ScrollToTop />
 		<Index />
 	</Router>,
   document.getElementById('root')
