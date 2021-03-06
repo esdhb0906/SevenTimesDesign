@@ -38,4 +38,5 @@ const Section = styled.section `
 `
 const ExperienceContainer = styled.div `
 	display: flex;
+	justify-content: center;
 `

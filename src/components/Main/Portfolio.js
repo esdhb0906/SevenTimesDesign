@@ -1,22 +1,14 @@
 import React from 'react'
-import { Container, Paper } from '@material-ui/core'
+import { Container, Typography } from '@material-ui/core'
+import Projects from './Project'
 import styled from 'styled-components'
 
 const Portfolio = () => {
 	return (
 		<Section>
 				<Container maxWidth="md" className="portfolio">
-					<Paper elevation={0} />
-					<Paper elevation={0} />
-					<Paper elevation={0} />
-					<Paper elevation={0} />
-					<Paper elevation={0} />
-					<Paper elevation={0} />
-					<Paper elevation={0} />
-					<Paper elevation={0} />
-					<Paper elevation={0} />
-					<Paper elevation={0} />
-					<Paper elevation={0} />
+					<Typography variant="h3">Portfolio</Typography>
+					<Projects />
 				</Container>
 			</Section>
 	)
@@ -37,9 +29,10 @@ const Section = styled.section `
 		align-items: center;
 	}
 
-	.portfolio > * {
-		width: 200px;
-		height: 200px;
-		margin: 16px 20px;
+	.MuiTypography-h3 {
+		font-size: 48px;
+		font-family: 'Playfair Display', Serif;
+		text-align: center;
+		margin-bottom: 50px;
 	}
 `
