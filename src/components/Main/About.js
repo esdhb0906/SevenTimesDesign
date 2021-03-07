@@ -1,18 +1,16 @@
 import React from 'react'
-import { Container, Typography } from '@material-ui/core'
-import { styled as MaterialStyled } from '@material-ui/styles'
 import styled from 'styled-components'
 import profile from '../../assets/EprisHB.png'
 
 const About = () => {
 	return (
 		<Section>
-			<Container maxWidth="md" justify="center">
+			<Container>
 				<Profile>
 					<img src={profile} alt="Epris HB" style={{maxWidth: 300, height:'auto'}} />
 				</Profile>
 				<Details>
-					<Intro variant="h4">Hello, I'm &Eacute;pris Harris-Burnett</Intro>
+					<Intro>Hello, I'm &Eacute;pris Harris-Burnett</Intro>
 					<p className="intro">I'm web developer and graphic designer in Charlotte, NC.</p>
 					<p>I fell in love with technology at a young age. Around the age of eight I discovered I was a natural at drawing. During the MySpace years, I decided to merge the two loves together by customizing pages for friends. Ultimately, graphic design was the path I walked before finding my way back into developing. Now, I'm back to enoying the best of both worlds; where creativity and logic coincide.</p>
 				</Details>
@@ -28,12 +26,15 @@ const Section = styled.section `
 	align-items: center;
 	min-height: 100vh;
 	color: #ccdbe5;
-
-	.MuiContainer-root {
-		display: flex;
-		align-items: center;
-	}
 `
+const Container = styled.section `
+	max-width: 1100px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+`
+
 const Profile = styled.div `
 	display: grid;
 	place-items: center;
@@ -45,9 +46,8 @@ const Details = styled.div `
 		font-style: italic;
 	}
 `
-
-const Intro = MaterialStyled(Typography) ({
-	fontFamily: "'Playfair Display', serif",
-	fontSize: '36px',
-	fontWeight: 700,
-})
+const Intro = styled.h5 `
+	font-family: 'Playfair Display', serif;
+	font-size: 36px;
+	font-weight: 500;
+`

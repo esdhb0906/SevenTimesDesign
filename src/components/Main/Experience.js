@@ -1,13 +1,12 @@
 import React from 'react'
-import { Container, Typography } from '@material-ui/core'
 import ExperienceDetails from './ExperienceDetails'
 import styled from 'styled-components'
 
 const Experience = () => {
 	return (
 		<Section>
-			<Container maxWidth="md" className="experience">
-				<Typography variant="h3">Work Experience</Typography>
+			<Container>
+				<Typography>Work Experience</Typography>
 				<ExperienceContainer>
 					<ExperienceDetails />
 				</ExperienceContainer>
@@ -23,19 +22,21 @@ const Section = styled.section `
 	display: grid;
 	place-items: center;
 	color: #ccdbe5;
-
-	.experience {
-		display: flex;
-		flex-direction: column;
-	}
-
-	.MuiTypography-h3 {
-		font-size: 48px;
-		font-family: 'Playfair Display', Serif;
-		text-align: center;
-		margin-bottom: 50px;
-	}
 `
+const Container = styled.div `
+	max-width: 1100px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+`
+const Typography = styled.h4 `
+	font-size: 48px;
+	font-family: 'Playfair Display', Serif;
+	font-weight: normal;
+	text-align: center;
+	margin-bottom: 50px;
+`
+
 const ExperienceContainer = styled.div `
 	display: flex;
 	justify-content: center;

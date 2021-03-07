@@ -1,6 +1,5 @@
 import React from 'react'
-import { Typography } from '@material-ui/core'
-import { Images, Proj} from '../../assets/img/images'
+import { Images } from '../../assets/img/images'
 import styled from 'styled-components'
 
 const Projects = () => {
@@ -8,8 +7,8 @@ const Projects = () => {
 		<Project>
 			{
 				Images.map((image, index) => (
-					<Card>
-						<img src={image.src} alt={image.id} key={index} />
+					<Card key={index}>
+						<img src={image.src} alt={image.id} />
 						{image.title}<br/>
 						{image.description}
 					</Card>

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Typography } from '@material-ui/core'
 import FaceIcon from '@material-ui/icons/Face'
 import FireplaceIcon from '@material-ui/icons/Fireplace'
 import LocalDiningIcon from '@material-ui/icons/LocalDining'
@@ -35,11 +34,11 @@ const ExperienceDetails = () => {
 		<Experience>
 			{
 				details.map((detail, index) => (
-					<Details>
+					<Details key={index}>
 						<div id="fill"></div>
 						{detail.icon}
-						<Typography variant="body2" >{detail.company}</Typography>
-						<Typography variant="overline">{detail.title}</Typography>
+						<Typography>{detail.company}</Typography>
+						<Typography className="overline">{detail.title}</Typography>
 					</Details>
 				))
 			}
@@ -85,10 +84,13 @@ const Details = styled.div `
 	:hover #fill {
 		top: 0;
 	}
+`
+const Typography = styled.p `
+	font-weight: normal;
 
-	.MuiTypography-overline {
+	&.overline {
 		font-family: 'Playfair Display', serif;
-		font-weight: 700;
+		font-weight: 500;
 		line-height: normal;
 		position: absolute;
 		top: 100px;

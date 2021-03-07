@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { Divider, List, ListItem, ListItemIcon, Typography } from '@material-ui/core'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import styled from 'styled-components'
 
-const Sidebars = () => {
+const Sidebars = forwardRef(({ props }, ref) => {
 	return (
 		<Wrapper>
 			<LeftSidebar>
@@ -32,7 +32,7 @@ const Sidebars = () => {
 			</RightSidebar>
 		</Wrapper>
 	)
-}
+});
 
 export default Sidebars
 
