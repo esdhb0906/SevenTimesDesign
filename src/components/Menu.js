@@ -15,28 +15,28 @@ const Menu = ({ isOpen, toggleMenu }) => {
 						to='about'
 						onClick={toggleMenu}
 						smooth={true}
-						duration={500}
+						duration={2000}
 						spy={true}
 					>About</MenuLinks>
 					<MenuLinks
 						to='experience'
 						onClick={toggleMenu}
 						smooth={true}
-						duration={500}
+						duration={2000}
 						spy={true}
 					>Experience</MenuLinks>
 					<MenuLinks
 						to='portfolio'
 						onClick={toggleMenu}
 						smooth={true}
-						duration={500}
+						duration={2000}
 						spy={true}
 					>Portfolio</MenuLinks>
 					<MenuLinks
 						to='contact'
 						onClick={toggleMenu}
 						smooth={true}
-						duration={500}
+						duration={2000}
 						spy={true}
 					>Contact</MenuLinks>
 				</MenuItem>
@@ -79,20 +79,15 @@ const MenuWrapper = styled.div `
 `
 
 const MenuItem = styled.ul `
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: repeat(6, 80px);
+	display: flex;
+	flex-direction: column;
 	text-align: center;
 
 	@media screen and (max-width: 480px) {
-		grid-template-rows: repeat(6, 60px);
 	}
 `
 const MenuLinks = styled(Link) `
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	list-style: none;
+	padding: 20px;
 	transition: 0.2s ease-in-out;
 	color: #ccdbe5;
 	cursor: pointer;
@@ -100,5 +95,10 @@ const MenuLinks = styled(Link) `
 	&:hover {
 		color: #bf4953;
 		transition: 0.2s ease-in-out;
+	}
+
+	&.active {
+		font-weight: bold;
+		font-style: italic;
 	}
 `

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-scroll'
 import MenuIcon from '@material-ui/icons/Menu'
 import Menu from './Menu'
@@ -8,18 +8,31 @@ import logo from '../assets/7TD-logo.png'
 const Header = () => {
 	// const classes = useStyles();
 	const [isOpen, setIsOpen] = useState(false);
+	const [scrollNav, setScrollNav] = useState(false);
 
 	const toggleMenu = () => {
 		setIsOpen(!isOpen)
 	}
+
+	const onScroll = () => {
+		if(window.scrollY >= 80) {
+			setScrollNav(true)
+		} else {
+			setScrollNav(false)
+		}
+	}
+
+	useEffect(() => {
+		window.addEventListener('scroll', onScroll)
+	}, [])
 	
 	return (
-		<Nav>
+		<Nav scrollNav={scrollNav}>
 			<Bar>
 				<LogoButton
 					to='hero'
 					smooth={true}
-					duration={500}
+					duration={2000}
 					spy={true}
 				>
 					<img src={logo} alt="Seven Times Design" />
@@ -37,7 +50,7 @@ const Header = () => {
 export default Header
 
 const Nav = styled.nav `
-	background: rgba(0, 0, 0, 0);
+	background: ${({ scrollNav }) => (scrollNav ? 'rgb(32,41,69, 0.5)' : 'transparent')};
 	height: 64px;
 	width: 100%;
 	display: flex;
