@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react'
-import { Divider, List, ListItem, ListItemIcon, Typography } from '@material-ui/core'
+import { Divider, IconButton, List, ListItem, ListItemIcon, Typography } from '@material-ui/core'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import styled from 'styled-components'
@@ -11,12 +11,16 @@ const Sidebars = forwardRef(({ props }, ref) => {
 				<List>
 					<ListItem disableGutters={true} >
 						<ListItemIcon >
-							<GitHubIcon />
+							<SocialButton href="https://esdhb0906.github.io" target="_blank">
+								<GitHubIcon />
+							</SocialButton>
 						</ListItemIcon>
 					</ListItem>
 					<ListItem disableGutters={true} >
 						<ListItemIcon >
-							<LinkedInIcon />
+							<SocialButton href="https://linkedin.com/in/eprishb" target="_blank">
+								<LinkedInIcon />
+							</SocialButton>
 						</ListItemIcon>
 					</ListItem>
 				</List>
@@ -62,7 +66,7 @@ const LeftSidebar = styled.div `
 		color: #ccdbe5;
 	}
 
-	span {
+	span.MuiTypography-root {
 		display: block;
 		font-size: 10px;
 		margin-top: 55px;
@@ -85,4 +89,9 @@ const Circle = styled.div `
 	margin: 5px 0;
 	border: 1px solid white;
 	border-radius: 50%;
+`
+const SocialButton = styled(IconButton) `
+	&.MuiIconButton-root {
+		padding: 0;
+	}
 `

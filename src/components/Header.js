@@ -8,26 +8,26 @@ import logo from '../assets/7TD-logo.png'
 const Header = () => {
 	// const classes = useStyles();
 	const [isOpen, setIsOpen] = useState(false);
-	const [scrollNav, setScrollNav] = useState(false);
+	// const [scrollNav, setScrollNav] = useState(false);
 
 	const toggleMenu = () => {
 		setIsOpen(!isOpen)
 	}
 
-	const onScroll = () => {
-		if(window.scrollY >= 80) {
-			setScrollNav(true)
-		} else {
-			setScrollNav(false)
-		}
-	}
+	// const onScroll = () => {
+	// 	if(window.scrollY >= 80) {
+	// 		setScrollNav(true)
+	// 	} else {
+	// 		setScrollNav(false)
+	// 	}
+	// }
 
-	useEffect(() => {
-		window.addEventListener('scroll', onScroll)
-	}, [])
+	// useEffect(() => {
+	// 	window.addEventListener('scroll', onScroll)
+	// }, [])
 	
 	return (
-		<Nav scrollNav={scrollNav}>
+		<Nav>
 			<Bar>
 				<LogoButton
 					to='hero'
@@ -50,7 +50,7 @@ const Header = () => {
 export default Header
 
 const Nav = styled.nav `
-	background: ${({ scrollNav }) => (scrollNav ? 'rgb(32,41,69, 0.5)' : 'transparent')};
+	${'' /* background: ${({ scrollNav }) => (scrollNav ? 'rgb(32,41,69, 0.5)' : 'transparent')}; */}
 	height: 64px;
 	width: 100%;
 	display: flex;
