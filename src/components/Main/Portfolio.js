@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const Portfolio = () => {
 	return (
-		<Section>
+		<Section id="portfolio">
 				<Container>
 					<Typography>Portfolio</Typography>
 					<Projects />
@@ -19,12 +19,13 @@ const Section = styled.section `
 	min-height: 100vh;
 	display: grid;
 	place-items: center;
+	padding-top: 80px;
 	color: #ccdbe5;
 `
 
 const Container = styled.div `
 	max-width: 1100px;
-	margin: 0 auto;
+	margin: 0 150px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;

@@ -1,18 +1,30 @@
 import React from 'react'
+import { Link } from 'react-scroll'
 import styled from 'styled-components'
 import heroImage from '../../assets/profile_web.png'
 
 const Hero = () => {
 	return (
-		<Jumbotron>
+		<Jumbotron id="hero">
 			<Container>
 				<HeroContent>
 					<Para className="main">Hi! I'm &Eacute;pris. I am a ... </Para>
 					<H3>Technical <br/><span>&</span> Visual</H3>
 					<Para className="second">Problem Solver</Para>
 					<div>
-						<HeroButton primary>VIEW MY WORK</HeroButton>
-						<HeroButton>MORE ABOUT ME</HeroButton>
+						<HeroButton
+							primary
+							to='portfolio'
+							smooth={true}
+							duration={500}
+							spy={true}
+						>VIEW MY WORK</HeroButton>
+						<HeroButton
+							to='about'
+							smooth={true}
+							duration={500}
+							spy={true}
+						>MORE ABOUT ME</HeroButton>
 					</div>
 				</HeroContent>
 			</Container>
@@ -24,13 +36,12 @@ export default Hero;
 
 const Jumbotron = styled.section `
 	height: 100vh;
-	padding-top: 64px;
 	background-image: url(${heroImage});
 	background-size: cover;
 `
 const Container = styled.div `
 	max-width: 1100px;
-	margin: 0 auto;
+	margin: 0 150px;
 `
 
 const HeroContent = styled.div `
@@ -55,7 +66,7 @@ const H3 = styled.h3 `
 `
 
 const Para = styled.p `
-	font-family: 'Lato', 'Helvetica', 'Arial', sanf-serif;
+	font-family: 'Lato', 'Helvetica', 'Arial', sans-serif;
 	font-weight: 300;
 	font-style: italic;
 
@@ -65,16 +76,19 @@ const Para = styled.p `
 
 	&.second {
 		font-size: calc(16px + (56 - 16) * (100vw - 320px) / (1200 - 320));
+		margin-bottom: 32px;
 	}
 `
 
-const HeroButton = styled.button `
+const HeroButton = styled(Link) `
 	background: ${props => props.primary ? "#BF4953" : "#202945" };
 	color: ${props => props.primary ? "#ccdbe5" : "#BF4953"};
 
 	width: 150px;
 	font-size: calc(10px + (12 - 10) * (100vw - 320px) / (1200 - 320));
-	margin: 16px 16px 16px;
+	margin-right: 16px;
+	margin-top: 16px;
 	padding: 16px;
 	border: 2px solid #BF4953;
+	border-radius: 3px;
 `

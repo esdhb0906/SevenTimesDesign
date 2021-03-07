@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const Experience = () => {
 	return (
-		<Section>
+		<Section id="experience">
 			<Container>
 				<Typography>Work Experience</Typography>
 				<ExperienceContainer>
@@ -25,7 +25,7 @@ const Section = styled.section `
 `
 const Container = styled.div `
 	max-width: 1100px;
-	margin: 0 auto;
+	margin: 0 150px;
 	display: flex;
 	flex-direction: column;
 `

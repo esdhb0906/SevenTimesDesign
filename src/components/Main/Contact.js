@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const Contact = () => {
 	return (
-		<Section>
+		<Section id="contact">
 				<Container maxWidth="md">
 					<Typography variant="h3">Stay In Touch ...</Typography>
 					<form>

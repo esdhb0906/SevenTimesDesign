@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { useTheme } from './theme/useTheme'
 import { Header, Sidebars, Hero, About, Experience, Portfolio, Contact, Footer } from './components'
 import { GlobalStyles } from './theme/GlobalStyles'
-import { Frame, Page } from 'framer'
 import styled, { ThemeProvider } from 'styled-components'
 import ThemeSelector from './ThemeSelector'
 
@@ -23,13 +22,11 @@ const App = () => {
 					<Wrapper>
 						<Header ThemeSelector={ThemeSelector} setter={setSelectedTheme} />
 						<Sidebars />
-						{/* <Page width={"100vw"} height={"100vh"}> */}
-							<Hero />
-							<About />
-							<Experience />
-							<Portfolio />
-							<Contact />
-						{/* </Page> */}
+						<Hero />
+						<About />
+						<Experience />
+						<Portfolio />
+						<Contact />
 						<Footer />
 					</Wrapper>
 				</ThemeProvider>
