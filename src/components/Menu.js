@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-scroll'
 import CloseIcon from '@material-ui/icons/Close'
 import styled from 'styled-components'
 
-const Menu = ({ isOpen, toggleMenu }) => {
+const Menu = ({ isOpen, toggleMenu, activePage }) => {
 	return (
 		<Container isOpen={isOpen} >
 			<Icon onClick={toggleMenu} >
@@ -13,28 +13,40 @@ const Menu = ({ isOpen, toggleMenu }) => {
 				<MenuItem>
 					<MenuLinks
 						to='about'
-						onClick={toggleMenu}
+						onClick={(e) => {
+							toggleMenu();
+							activePage(e.target.innerText);
+						}}
 						smooth={true}
 						duration={1500}
 						spy={true}
 					>About</MenuLinks>
 					<MenuLinks
 						to='experience'
-						onClick={toggleMenu}
+						onClick={(e) => {
+							toggleMenu();
+							activePage(e.target.innerText);
+						}}
 						smooth={true}
 						duration={1500}
 						spy={true}
 					>Experience</MenuLinks>
 					<MenuLinks
 						to='portfolio'
-						onClick={toggleMenu}
+						onClick={(e) => {
+							toggleMenu();
+							activePage(e.target.innerText);
+						}}
 						smooth={true}
 						duration={1500}
 						spy={true}
 					>Portfolio</MenuLinks>
 					<MenuLinks
 						to='contact'
-						onClick={toggleMenu}
+						onClick={(e) => {
+							toggleMenu();
+							activePage(e.target.innerText);
+						}}
 						smooth={true}
 						duration={1500}
 						spy={true}

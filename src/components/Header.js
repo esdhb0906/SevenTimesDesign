@@ -31,11 +31,14 @@ const Header = ({ activePage }) => {
 			<Bar>
 				<LogoButton
 					to='hero'
+					onClick={(e) => {
+						activePage(e.target.getAttribute("page"));
+					}}
 					smooth={true}
 					duration={1000}
 					spy={true}
 				>
-					<img src={logo} alt="Seven Times Design" />
+					<img src={logo} alt="Seven Times Design" page="hero"/>
 				</LogoButton>
 				{/* <ThemeSelector setter={setter} /> */}
 				<MenuButton onClick={toggleMenu} >

@@ -12,7 +12,11 @@ const App = () => {
   const [selectedTheme, setSelectedTheme] = useState(theme);
 	const [loading, setLoading] = useState(true)
 
-	const [activePage, setActivePage] = useState("")
+	const [activePage, setActivePage] = useState("hero")
+
+	const updateActivePage = (page) => {
+		setActivePage(page.toLowerCase());
+	}
 
   useEffect(() => {
     setTimeout(() => setLoading(false), 2000)
@@ -33,7 +37,7 @@ const App = () => {
 							<Header
 								ThemeSelector={ThemeSelector}
 								setter={setSelectedTheme}
-								activePage={activePage}
+								activePage={updateActivePage}
 							/>
 							<Sidebars activePage={activePage} />
 							<Hero />

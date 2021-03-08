@@ -1,12 +1,16 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion, AnimateSharedLayout } from 'framer-motion'
 import { Link } from 'react-scroll'
 import styled from 'styled-components'
 
 const pageIds = ['hero', 'about', 'experience', 'portfolio', 'contact']
 
-const RightSidebar = () => {
+const RightSidebar = ({ activePage }) => {
 	const [selected, setSelected] = useState(pageIds[0]);
+
+	useEffect(() => {
+		setSelected(activePage)
+	}, [activePage])
 
 	return (
 		<Sidebar>
