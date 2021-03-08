@@ -32,7 +32,7 @@ const Header = () => {
 				<LogoButton
 					to='hero'
 					smooth={true}
-					duration={2000}
+					duration={1000}
 					spy={true}
 				>
 					<img src={logo} alt="Seven Times Design" />

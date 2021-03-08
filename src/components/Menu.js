@@ -15,28 +15,28 @@ const Menu = ({ isOpen, toggleMenu }) => {
 						to='about'
 						onClick={toggleMenu}
 						smooth={true}
-						duration={2000}
+						duration={1500}
 						spy={true}
 					>About</MenuLinks>
 					<MenuLinks
 						to='experience'
 						onClick={toggleMenu}
 						smooth={true}
-						duration={2000}
+						duration={1500}
 						spy={true}
 					>Experience</MenuLinks>
 					<MenuLinks
 						to='portfolio'
 						onClick={toggleMenu}
 						smooth={true}
-						duration={2000}
+						duration={1500}
 						spy={true}
 					>Portfolio</MenuLinks>
 					<MenuLinks
 						to='contact'
 						onClick={toggleMenu}
 						smooth={true}
-						duration={2000}
+						duration={1500}
 						spy={true}
 					>Contact</MenuLinks>
 				</MenuItem>
