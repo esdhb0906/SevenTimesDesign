@@ -1,5 +1,6 @@
 import React from 'react'
-import { Button, Container, Grid, TextField, Typography } from '@material-ui/core'
+import { Container, Grid, TextField, Typography } from '@material-ui/core'
+import Button from './Button'
 import styled from 'styled-components'
 
 const Contact = () => {
@@ -18,7 +19,7 @@ const Contact = () => {
 						</Grid>
 						<TextField required fullWidth label="Message Subject" defaultValue="RE: Subject" variant="outlined" margin="normal" />
 						<TextField required multiline fullWidth label="Message" defaultValue="Message ..." variant="outlined" margin="normal" rows={4} />
-						<Button type="submit" color="secondary" variant="contained" disableElevation >Submit</Button>
+						<Button type="submit" color="secondary" variant="contained" disableElevation primary text="SUBMIT" >Submit</Button>
 					</form>
 				</Container>
 			</Section>
@@ -46,5 +47,9 @@ const Section = styled.section `
 
 	form fieldset {
 		border-color: #ccdbe5;
+	}
+
+	button {
+		margin-top: 30px;
 	}
 `

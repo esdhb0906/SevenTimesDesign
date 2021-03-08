@@ -21,6 +21,7 @@ const RightSidebar = () => {
 							spy={true}
 						>
 							<Circle
+								pageId={pageId}
 								isSelected={selected === pageId}
 								onClick={() => setSelected(pageId)}
 							/>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-scroll'
+import Button from './Button'
 import styled from 'styled-components'
 import heroImage from '../../assets/profile_web.png'
 
@@ -12,19 +12,21 @@ const Hero = () => {
 					<H3>Technical <br/><span>&</span> Visual</H3>
 					<Para className="second">Problem Solver</Para>
 					<div>
-						<HeroButton
+						<Button
 							primary
 							to='portfolio'
 							smooth={true}
 							duration={500}
 							spy={true}
-						>VIEW MY WORK</HeroButton>
-						<HeroButton
+							text="VIEW MY WORK"
+						/>
+						<Button
 							to='about'
 							smooth={true}
 							duration={500}
 							spy={true}
-						>MORE ABOUT ME</HeroButton>
+							text="MORE ABOUT ME"
+						/>
 					</div>
 				</HeroContent>
 			</Container>
@@ -78,17 +80,4 @@ const Para = styled.p `
 		font-size: calc(16px + (56 - 16) * (100vw - 320px) / (1200 - 320));
 		margin-bottom: 32px;
 	}
-`
-
-const HeroButton = styled(Link) `
-	background: ${props => props.primary ? "#BF4953" : "#202945" };
-	color: ${props => props.primary ? "#ccdbe5" : "#BF4953"};
-
-	width: 150px;
-	font-size: calc(10px + (12 - 10) * (100vw - 320px) / (1200 - 320));
-	margin-right: 16px;
-	margin-top: 16px;
-	padding: 16px;
-	border: 2px solid #BF4953;
-	border-radius: 3px;
 `

@@ -3,11 +3,11 @@ import LeftSidebar from './LeftSidebar'
 import RightSidebar from './RightSidebar'
 import styled from 'styled-components'
 
-const Sidebars = () => {
+const Sidebars = ({ activePage }) => {
 	return (
 		<Wrapper>
 			<LeftSidebar />
-			<RightSidebar />
+			<RightSidebar activePage={activePage} />
 		</Wrapper>
 	)
 }

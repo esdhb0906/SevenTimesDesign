@@ -12,6 +12,8 @@ const App = () => {
   const [selectedTheme, setSelectedTheme] = useState(theme);
 	const [loading, setLoading] = useState(true)
 
+	const [activePage, setActivePage] = useState("")
+
   useEffect(() => {
     setTimeout(() => setLoading(false), 2000)
   }, [])
@@ -28,8 +30,12 @@ const App = () => {
 					themeLoaded && <ThemeProvider theme={selectedTheme}>
 						<GlobalStyles />
 						<Wrapper>
-							<Header ThemeSelector={ThemeSelector} setter={setSelectedTheme} />
-							<Sidebars />
+							<Header
+								ThemeSelector={ThemeSelector}
+								setter={setSelectedTheme}
+								activePage={activePage}
+							/>
+							<Sidebars activePage={activePage} />
 							<Hero />
 							<About />
 							<Experience />

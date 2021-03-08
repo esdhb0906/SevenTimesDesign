@@ -5,7 +5,7 @@ import Menu from './Menu'
 import styled from 'styled-components'
 import logo from '../assets/7TD-logo.png'
 
-const Header = () => {
+const Header = ({ activePage }) => {
 	// const classes = useStyles();
 	const [isOpen, setIsOpen] = useState(false);
 	// const [scrollNav, setScrollNav] = useState(false);
@@ -42,7 +42,11 @@ const Header = () => {
 					<MenuIcon />
 				</MenuButton>
 			</Bar>
-			<Menu isOpen={isOpen} toggleMenu={toggleMenu} />
+			<Menu
+				isOpen={isOpen}
+				toggleMenu={toggleMenu}
+				activePage={activePage}
+			/>
 		</Nav>
 	)
 }
