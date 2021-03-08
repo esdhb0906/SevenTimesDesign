@@ -3,7 +3,7 @@ import { Link } from 'react-scroll'
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
-const Button = ({ primary, to, smooth, duration, spy, text }) => {
+const Button = ({ primary, to, smooth, duration, spy, text, activePage }) => {
 	return (
 		<motion.button
 			whileHover={{scale: 1.1}}
@@ -12,6 +12,10 @@ const Button = ({ primary, to, smooth, duration, spy, text }) => {
 			<ButtonComp
 				primary={primary}
 				to={to}
+				page={to}
+				onClick={(e) => {
+					activePage(e.target.getAttribute("page"));
+				}}
 				smooth={smooth}
 				duration={duration}
 				spy={spy}

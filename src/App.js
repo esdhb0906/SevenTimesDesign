@@ -40,12 +40,12 @@ const App = () => {
 								activePage={updateActivePage}
 							/>
 							<Sidebars activePage={activePage} />
-							<Hero />
+							<Hero activePage={updateActivePage} />
 							<About />
 							<Experience />
 							<Portfolio />
 							<Contact />
-							<Footer />
+							<Footer activePage={activePage} />
 						</Wrapper>
 					</ThemeProvider>
 				}

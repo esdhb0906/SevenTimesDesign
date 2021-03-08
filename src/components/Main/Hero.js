@@ -3,7 +3,7 @@ import Button from './Button'
 import styled from 'styled-components'
 import heroImage from '../../assets/profile_web.png'
 
-const Hero = () => {
+const Hero = ({activePage}) => {
 	return (
 		<Jumbotron id="hero">
 			<Container>
@@ -19,6 +19,7 @@ const Hero = () => {
 							duration={500}
 							spy={true}
 							text="VIEW MY WORK"
+							activePage={activePage}
 						/>
 						<Button
 							to='about'
@@ -26,6 +27,7 @@ const Hero = () => {
 							duration={500}
 							spy={true}
 							text="MORE ABOUT ME"
+							activePage={activePage}
 						/>
 					</div>
 				</HeroContent>
