@@ -2,7 +2,7 @@ import React from 'react'
 import { Toolbar } from '@material-ui/core'
 import styled from 'styled-components'
 
-function Footer() {
+function Footer({ activePage }) {
 	return (
 		<FooterCont>
 			<Toolbar>
@@ -10,8 +10,13 @@ function Footer() {
 					&copy; 2021 Seven Times Design <br />
 					All Rights Reserved.
 				</Copyright>
-				<PageCounter>
-					1/5
+				<PageCounter page={activePage}>
+					{activePage === 'hero' && 1}
+					{activePage === 'about' && 2}
+					{activePage === 'experience' && 3}
+					{activePage === 'portfolio' && 4}
+					{activePage === 'contact' && 5}
+					 /5
 				</PageCounter>
 			</Toolbar>
 		</FooterCont>
@@ -35,10 +40,6 @@ const FooterCont = styled.footer `
 	}
 `
 
-const Copyright = styled.div `
+const Copyright = styled.div ``
 
-`
-
-const PageCounter = styled.div `
-
-`
+const PageCounter = styled.div ``

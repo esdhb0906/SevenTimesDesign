@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useTheme } from './theme/useTheme'
 import { Header, Sidebars, Hero, About, Experience, Portfolio, Contact, Footer } from './components'
 import Loader from './components/Loader'
+import Modal from './components/Modal/Modal'
 import { GlobalStyles } from './theme/GlobalStyles'
 import styled, { ThemeProvider } from 'styled-components'
 import ThemeSelector from './ThemeSelector'
@@ -12,10 +13,17 @@ const App = () => {
   const [selectedTheme, setSelectedTheme] = useState(theme);
 	const [loading, setLoading] = useState(true)
 
-	const [activePage, setActivePage] = useState("hero")
+	const [activePage, setActivePage] = useState("hero");
+	const [showModal, setShowModal] = useState(false);
+	const [modalContent, setModalContent] = useState("");
 
 	const updateActivePage = (page) => {
 		setActivePage(page.toLowerCase());
+	}
+
+	const toggleModal = (type) => {
+		setShowModal(!showModal);
+		setModalContent(type)
 	}
 
   useEffect(() => {
@@ -39,11 +47,12 @@ const App = () => {
 								setter={setSelectedTheme}
 								activePage={updateActivePage}
 							/>
-							<Sidebars activePage={activePage} />
+							<Sidebars activePage={activePage} updateActivePage={updateActivePage} />
+							<Modal showModal={showModal} toggleModal={toggleModal} content={modalContent} />
 							<Hero activePage={updateActivePage} />
 							<About />
-							<Experience />
-							<Portfolio />
+							<Experience toggleModal={toggleModal} />
+							<Portfolio toggleModal={toggleModal} />
 							<Contact />
 							<Footer activePage={activePage} />
 						</Wrapper>

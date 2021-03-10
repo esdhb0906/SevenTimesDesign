@@ -1,3 +1,8 @@
+import FaceIcon from '@material-ui/icons/Face'
+import FireplaceIcon from '@material-ui/icons/Fireplace'
+import LocalDiningIcon from '@material-ui/icons/LocalDining'
+import SportsBasketballIcon from '@material-ui/icons/SportsBasketball'
+
 export const Feat = [
 	{ id: 'memfeat', cName: 'feat', src: require('./memory-game-feat.png').default,
 		title: 'Dessert for Memory', description: 'Personal Project' },
@@ -63,13 +68,14 @@ export const Proj = [
 		title: 'The Rise of Fall Pasta', description: 'Point of Sales Flyer' },
 ];
 
-export const Logos = [
+export const Jobs = [
+	{ id: 'brooks', cName: 'logo', src: require('./brooks-logo.png').default,
+		title: 'Brooks', description: 'Logo', icon: <FireplaceIcon />, company: "Brooks Equipment", jobTitle: "Web Developer & Graphic Designer" },
 	{ id: 'bradley', cName: 'logo', src: require('./bradley-logo.png').default,
-		title: 'Bradley', description: 'Logo' },
-	{ id: 'continental', cName: 'logo', src: require('./continental-logo.png').default,
-		title: 'Continental', description: 'Logo' },
+		title: 'Bradley', description: 'Logo', icon: <FaceIcon />, company: "Bradley Co.", jobTitle: "Graphic Designer" },
+	{ id: 'continental', cName: 'logo', src: require('./continental-logo.png').default, title: 'Continental', description: 'Logo', icon: <LocalDiningIcon />, company: "Continental Services", jobTitle: "Graphic & Motion Designer" },
 	{ id: 'palace', cName: 'logo', src: require('./palace-logo.png').default,
-		title: 'Palace Sports & Entertainment', description: 'Logo' }
+		title: 'Palace Sports & Entertainment', description: 'Logo', icon: <SportsBasketballIcon />, company: "Palace Sports & Entertainment", jobTitle: "Graphic Design Intern" }
 ]
 
 export const themeIcons = [
