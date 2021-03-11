@@ -7,7 +7,7 @@ const About = () => {
 		<Section id="about">
 			<Container>
 				<Profile>
-					<img src={profile} alt="Epris HB" style={{maxWidth: 300, height:'auto'}} />
+					<img src={profile} alt="Epris HB" style={{width: 300, height:'auto'}} />
 				</Profile>
 				<Details>
 					<Intro>Hello, I'm &Eacute;pris Harris-Burnett</Intro>
@@ -22,18 +22,23 @@ const About = () => {
 export default About
 
 const Section = styled.section `
-	display: flex;
-	align-items: center;
+	display: grid;
+	place-items: center;
 	min-height: 100vh;
+	margin: 80px 0;
 	color: #ccdbe5;
 `
 const Container = styled.section `
 	max-width: 1100px;
-	margin: 0 150px;
+	margin: 0 50px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
+
+	@media screen and (min-width: 768px) {
+		margin: 0 150px;
+	}
 `
 
 const Profile = styled.div `
@@ -46,6 +51,8 @@ const Profile = styled.div `
 	}
 `
 const Details = styled.div `
+	max-width: 600px;
+
 	.intro {
 		line-height: 1.5em;
 		font-style: italic;
@@ -53,6 +60,6 @@ const Details = styled.div `
 `
 const Intro = styled.h5 `
 	font-family: 'Playfair Display', serif;
-	font-size: 36px;
+	font-size: calc(16px + (36 - 16) * (100vw - 320px) / (1200 - 320));
 	font-weight: 500;
 `

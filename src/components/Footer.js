@@ -26,7 +26,6 @@ function Footer({ activePage }) {
 export default Footer
 
 const FooterCont = styled.footer `
-
 	.MuiToolbar-regular {
 		display: flex;
 		justify-content: space-between;
@@ -38,8 +37,13 @@ const FooterCont = styled.footer `
 		left: 0;
 		color: #ccdbe5;
 	}
-`
 
+	@media screen and (max-width: 768px) {
+		.MuiToolbar-regular {
+			background: #202945;
+		}
+	}
+`
 const Copyright = styled.div ``
 
 const PageCounter = styled.div ``

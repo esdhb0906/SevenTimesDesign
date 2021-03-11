@@ -42,7 +42,7 @@ function Project({ src, date, desc, service, match }) {
 const DetailWrapper = styled.div `
 	display: grid;
 	grid-gap: 1.5rem;
-	grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+	grid-template-columns: repeat(auto-fit, minmax(250px, auto));
 	align-items: center;
 `
 const Media = styled.div `
@@ -50,7 +50,7 @@ const Media = styled.div `
 	place-items: center;
 
 	img {
-		max-height: 450px;
+		max-width: 450px;
 		object-fit: contain;
 	}
 
@@ -67,7 +67,7 @@ const Media = styled.div `
 	}
 
 	.slides img {
-		height: 300px;
+		height: 210px;
 		width: auto;
 	}
 
@@ -76,8 +76,35 @@ const Media = styled.div `
 		grid-auto-flow: column;
 		grid-gap: 0px;
 		overflow: hidden;
-		width: 360px;
+		width: 250px;
 		margin-bottom: 10px;
+	}
+
+	@media screen and (min-width: 480px) {
+		.slides {
+			width: 360px;
+		}
+
+		.slides img {
+			height: 300px;
+		}
+
+		.w275 {
+			height: 280px!important;
+			width: 275px!important;
+		}
+	}
+
+	@media screen and (min-width: 480px) and (max-width: 620px) {
+		.w275 {
+			width: 360px!important;
+		}
+	}
+
+	@media screen and (min-width: 620px) {
+		.slides#w260 {
+			width: 260px;
+		}
 	}
 `
 const Detail = styled.div `

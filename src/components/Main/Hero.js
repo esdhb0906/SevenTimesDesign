@@ -45,7 +45,11 @@ const Jumbotron = styled.section `
 `
 const Container = styled.div `
 	max-width: 1100px;
-	margin: 0 150px;
+	margin: 0 50px;
+
+	@media screen and (min-width: 768px) {
+		margin: 0 150px;
+	}
 `
 
 const HeroContent = styled.div `
@@ -55,6 +59,13 @@ const HeroContent = styled.div `
 	height: calc(100vh - 64px);
 	padding: 100px 0;
 	color: #ccdbe5;
+
+	@media screen and (max-width: 375px) {
+		button {
+			height: 50px;
+			margin-bottom: 10px;
+		}
+	}
 `
 
 const H3 = styled.h3 `

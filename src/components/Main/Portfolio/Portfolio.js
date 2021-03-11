@@ -25,11 +25,15 @@ const Section = styled.section `
 
 const Container = styled.div `
 	max-width: 1100px;
-	margin: 0 150px;
+	margin: 0 50px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
+	
+	@media screen and (min-width: 768px) {
+		margin: 0 150px;
+	}
 `
 const Typography = styled.h4 `
 	font-size: 48px;

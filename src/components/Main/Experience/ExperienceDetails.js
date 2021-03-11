@@ -43,6 +43,7 @@ const Detail = styled.div `
 
 	img {
 		max-width: 300px;
+		width: 80%;
 	}
 `
 const Date = styled.p `
@@ -50,6 +51,7 @@ const Date = styled.p `
 `
 const Description = styled.p `
 	max-width: 600px;
+	width: 80%;
 
 	li {
 		margin-bottom: 10px;

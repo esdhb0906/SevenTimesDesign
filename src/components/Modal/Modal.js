@@ -50,12 +50,18 @@ export default Modal
 const ModalContainer = styled(motion.div) `
 	display: grid;
 	place-items: center;
-	height: 100vh;
-	width: calc(100vw - 248px);
-	margin: 0 124px;
+	height: calc(100vh - 120px);
+	width: calc(100vw - 100px);
+	margin: 64px 50px 56px;
 	background: #202945;
 	position: fixed;
 	z-index: 10;
+
+	@media screen and (min-width: 768px) {
+		margin: 0 124px;
+		height: 100vh;
+		width: calc(100vw - 248px);
+	}
 `
 const Cancel = MaterialStyled(CancelIcon)({
 	width: 25,

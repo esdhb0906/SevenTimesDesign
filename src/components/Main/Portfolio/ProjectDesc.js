@@ -87,13 +87,13 @@ export const Descriptions = [
 		service: "Portfolio Magazine | Andre Morton | I AM Creative LLC",
 		desc: "Ad a part of portfolio show, students have to showcase their work. With aspirations of being a creative director, I had the opportunity to be under his direction. I was given an idea of what the content and topics would be and we went out and took photos based off of those concepts. After that, we began strategizing the order and layout of the piece.",
 		src: <div class="multiple">
-			<div class="slides">
-				<img src={require('./../../../assets/img/projects/AP_04.jpg').default} alt="" id="ap305-1" />,
-				<img src={require('./../../../assets/img/projects/AP_05.jpg').default} alt="" id="ap305-2" />,
-				<img src={require('./../../../assets/img/projects/AP_07.jpg').default} alt="" id="ap305-3" />,
-				<img src={require('./../../../assets/img/projects/AP_08.jpg').default} alt="" id="ap305-4" />,
-				<img src={require('./../../../assets/img/projects/AP_10.jpg').default} alt="" id="ap305-5" />,
-				<img src={require('./../../../assets/img/projects/AP_11.jpg').default} alt="" id="ap305-6" />
+			<div class="slides" id="w260">
+				<img src={require('./../../../assets/img/projects/AP_04.jpg').default} alt="" id="ap305-1" class="w275" />,
+				<img src={require('./../../../assets/img/projects/AP_05.jpg').default} alt="" id="ap305-2" class="w275" />,
+				<img src={require('./../../../assets/img/projects/AP_07.jpg').default} alt="" id="ap305-3" class="w275" />,
+				<img src={require('./../../../assets/img/projects/AP_08.jpg').default} alt="" id="ap305-4" class="w275" />,
+				<img src={require('./../../../assets/img/projects/AP_10.jpg').default} alt="" id="ap305-5" class="w275" />,
+				<img src={require('./../../../assets/img/projects/AP_11.jpg').default} alt="" id="ap305-6" class="w275" />
 			</div>
 			<a href="#ap305-1">1</a>
 			<a href="#ap305-2">2</a>
