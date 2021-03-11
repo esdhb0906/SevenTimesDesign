@@ -10,7 +10,7 @@ const LeftSidebar = () => {
 			<List>
 				<ListItem disableGutters={true} >
 					<ListItemIcon >
-						<SocialButton href="https://esdhb0906.github.io" target="_blank">
+						<SocialButton href="https://github.com/esdhb0906" target="_blank">
 							<GitHubIcon />
 						</SocialButton>
 					</ListItemIcon>

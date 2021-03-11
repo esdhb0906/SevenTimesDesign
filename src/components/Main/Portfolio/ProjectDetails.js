@@ -51,6 +51,7 @@ const Media = styled.div `
 
 	img {
 		max-width: 450px;
+		width: 80%;
 		object-fit: contain;
 	}
 
