@@ -25,7 +25,9 @@ function Project({ src, date, desc, service, match }) {
 		<>
 			{match && (
 				<DetailWrapper>
-					<img src={src} alt="" />
+					<Media>
+						{src}
+					</Media>
 					<Detail>
 						<Service>{service}</Service>
 						<Date>{date}</Date>
@@ -38,20 +40,51 @@ function Project({ src, date, desc, service, match }) {
 }
 
 const DetailWrapper = styled.div `
-	display: flex;
+	display: grid;
+	grid-gap: 1.5rem;
+	grid-template-columns: repeat(auto-fit, minmax(300px, auto));
 	align-items: center;
-	justify-content: center;
+`
+const Media = styled.div `
+	display: grid;
+	place-items: center;
 
 	img {
-		max-width: 300px;
-		margin-right: 50px;
+		max-height: 450px;
+		object-fit: contain;
+	}
+
+	.multiple {
+		justify-items: center;
+		text-align: center;
+	}
+
+	.multiple a {
+		display: inline-flex;
+		margin: 0 5px;
+		color: #ccdbe5;
+		text-decoration: none;
+	}
+
+	.slides img {
+		height: 300px;
+		width: auto;
+	}
+
+	.slides {
+		display: grid;
+		grid-auto-flow: column;
+		grid-gap: 0px;
+		overflow: hidden;
+		width: 360px;
+		margin-bottom: 10px;
 	}
 `
 const Detail = styled.div `
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	max-width: 600px;
+	text-align: center;
 `
 const Service = styled.h4 ``
 const Date = styled.p `
