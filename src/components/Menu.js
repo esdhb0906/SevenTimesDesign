@@ -41,6 +41,9 @@ const Menu = ({ isOpen, toggleMenu, activePage }) => {
 						duration={1500}
 						spy={true}
 					>Portfolio</MenuLinks>
+					<Resume primary>
+						<a href="../assets/EprisBurnettResume.pdf" download> RESUM&Eacute; </a>
+					</Resume>
 					{/* <MenuLinks
 						to='contact'
 						onClick={(e) => {
@@ -113,4 +116,17 @@ const MenuLinks = styled(Link) `
 		font-weight: bold;
 		font-style: italic;
 	}
+`
+const Resume = styled.div `
+	background: ${props => props.primary ? "#BF4953" : "rgba(0,0,0,0)" };
+	a {
+		color: ${props => props.primary ? "#ccdbe5" : "#BF4953"};
+		text-decoration: none;
+	}
+
+	width: 150px;
+	font-size: calc(10px + (12 - 10) * (100vw - 320px) / (1200 - 320));
+	padding: 16px;
+	border: 2px solid #BF4953;
+	border-radius: 3px;
 `
