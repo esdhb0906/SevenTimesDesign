@@ -2,12 +2,20 @@ import React from 'react'
 import { Divider, IconButton, List, ListItem, ListItemIcon, Typography } from '@material-ui/core'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
+import MailOutlineIcon from '@material-ui/icons/MailOutline'
 import styled from 'styled-components'
 
 const LeftSidebar = () => {
 	return (
 		<Sidebar>
 			<List>
+			<ListItem disableGutters={true} >
+					<ListItemIcon >
+						<SocialButton href="mailto: eharrisburnett@gmail.com" target="_blank">
+							<MailOutlineIcon />
+						</SocialButton>
+					</ListItemIcon>
+				</ListItem>
 				<ListItem disableGutters={true} >
 					<ListItemIcon >
 						<SocialButton href="https://github.com/esdhb0906" target="_blank">
