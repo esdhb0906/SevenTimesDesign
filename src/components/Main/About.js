@@ -33,12 +33,17 @@ const Container = styled.section `
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-wrap: wrap;
 `
 
 const Profile = styled.div `
 	display: grid;
 	place-items: center;
 	margin-right: 50px;
+
+	img {
+		max-width: 90%;
+	}
 `
 const Details = styled.div `
 	.intro {

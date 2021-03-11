@@ -3,7 +3,7 @@ import { motion, AnimateSharedLayout } from 'framer-motion'
 import { Link } from 'react-scroll'
 import styled from 'styled-components'
 
-const pageIds = ['hero', 'about', 'experience', 'portfolio', 'contact']
+const pageIds = ['hero', 'about', 'experience', 'portfolio']
 
 const RightSidebar = ({ activePage }) => {
 	const [selected, setSelected] = useState(pageIds[0]);

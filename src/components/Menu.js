@@ -41,7 +41,7 @@ const Menu = ({ isOpen, toggleMenu, activePage }) => {
 						duration={1500}
 						spy={true}
 					>Portfolio</MenuLinks>
-					<MenuLinks
+					{/* <MenuLinks
 						to='contact'
 						onClick={(e) => {
 							toggleMenu();
@@ -50,7 +50,7 @@ const Menu = ({ isOpen, toggleMenu, activePage }) => {
 						smooth={true}
 						duration={1500}
 						spy={true}
-					>Contact</MenuLinks>
+					>Contact</MenuLinks> */}
 				</MenuItem>
 			</MenuWrapper>
 		</Container>

@@ -53,7 +53,7 @@ const App = () => {
 							<About />
 							<Experience toggleModal={toggleModal} />
 							<Portfolio toggleModal={toggleModal} />
-							<Contact />
+							{/* <Contact /> */}
 							<Footer activePage={activePage} />
 						</Wrapper>
 					</ThemeProvider>
