@@ -1,7 +1,7 @@
 import React from 'react'	
 import { AnimatePresence, motion } from 'framer-motion'
 import ExperienceDetails from '../Main/Experience/ExperienceDetails'
-import Project from '../Main/Project'
+import ProjectDetails from '../Main/Portfolio/ProjectDetails'
 import CancelIcon from '@material-ui/icons/Cancel'
 import { styled as MaterialStyled } from '@material-ui/core/styles'
 import styled from 'styled-components'
@@ -23,13 +23,17 @@ const Modal = ({ showModal, toggleModal, content }) => {
 							}}
 						>
 							{
-								content === "experience" && (
-									<ExperienceDetails />
+								content.type === "experience" && (
+									<ExperienceDetails 
+										content={content}
+									/>
 								)
 							}
 							{
-								content === "portfolio" && (
-									<Project />
+								content.type === "portfolio" && (
+									<ProjectDetails
+										content={content}
+									/>
 								)
 							}
 							<Cancel onClick={toggleModal} />
@@ -52,9 +56,6 @@ const ModalContainer = styled(motion.div) `
 	background: #202945;
 	position: fixed;
 	z-index: 10;
-`
-
-const ModalContent = styled.div `
 `
 const Cancel = MaterialStyled(CancelIcon)({
 	width: 25,

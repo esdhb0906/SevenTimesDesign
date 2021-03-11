@@ -15,15 +15,15 @@ const App = () => {
 
 	const [activePage, setActivePage] = useState("hero");
 	const [showModal, setShowModal] = useState(false);
-	const [modalContent, setModalContent] = useState("");
+	const [modalContent, setModalContent] = useState();
 
 	const updateActivePage = (page) => {
 		setActivePage(page.toLowerCase());
 	}
 
-	const toggleModal = (type) => {
+	const toggleModal = (e, type) => {
 		setShowModal(!showModal);
-		setModalContent(type)
+		setModalContent({id: e.id, type: type})
 	}
 
   useEffect(() => {

@@ -27,7 +27,7 @@ const Experience = ({ toggleModal }) => {
 									<Typography className="overline">{job.jobTitle}</Typography>
 									<Launch 
 										id={job.company}
-										onClick={() => toggleModal("experience")}
+										onClick={(e) => toggleModal(e.currentTarget, "experience")}
 									/>
 								</Details>
 							))

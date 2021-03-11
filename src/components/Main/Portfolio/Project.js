@@ -1,13 +1,17 @@
 import React from 'react'
-import { Images } from '../../assets/img/images'
+import { Images } from '../../../assets/img/images'
 import styled from 'styled-components'
 
-const Projects = () => {
+const Projects = ({toggleModal}) => {
 	return (
 		<Project>
 			{
 				Images.map((image, index) => (
-					<Card key={index}>
+					<Card
+						key={index}
+						id={image.id}
+						onClick={(e) => toggleModal(e.currentTarget, "portfolio")}
+					>
 						<img src={image.src} alt={image.id} />
 						{image.title}<br/>
 						{image.description}

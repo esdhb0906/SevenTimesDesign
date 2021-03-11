@@ -2,12 +2,12 @@ import React from 'react'
 import Projects from './Project'
 import styled from 'styled-components'
 
-const Portfolio = () => {
+const Portfolio = ({ toggleModal }) => {
 	return (
 		<Section id="portfolio">
 				<Container>
 					<Typography>Portfolio</Typography>
-					<Projects />
+					<Projects toggleModal={toggleModal} />
 				</Container>
 			</Section>
 	)
